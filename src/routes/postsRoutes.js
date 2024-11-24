@@ -8,8 +8,13 @@ import {
 } from "../controllers/postsController.js"; // Importa as funções controladoras para lidar com a lógica dos posts
 import cors from "cors";
 
+// Configurações para o middleware CORS (Cross-Origin Resource Sharing)
 const corsOptions = {
+  // Especifica a origem permitida para realizar requisições.
+  // Neste caso, apenas requisições originárias de http://localhost:8000 serão permitidas.
   origin: "http://localhost:8000",
+  // Define o código de status da resposta para requisições OPTIONS.
+  // O valor 200 indica que a pré-verificação (preflight) foi bem-sucedida.
   optionsSuccessStatus: 200,
 };
 
